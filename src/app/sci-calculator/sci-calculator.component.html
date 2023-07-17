@@ -1,0 +1,60 @@
+<body [ngClass]="{'lt-body': !isThemeChanged, 'dt-body': isThemeChanged}">  
+    <div class="theme-toggle">
+        <button (click)="ChangeTheme()">{{ themeText  }}</button>
+    </div>
+    <div class="my-cal" [ngClass]="{'light-theme-my-cal': !isThemeChanged, 'dark-theme-my-cal': isThemeChanged }">
+        <input #box (keyup.enter)="calcvalue(box.value)"  [(ngModel)]="toShow" class="display" type="text">
+        <div class="all-btns">
+            <div 
+            class="all-btn-numbers"
+            [ngClass]="{'lt-all-btn-numbers': !isThemeChanged, 'dt-all-btn-numbers': isThemeChanged }"
+            >
+                <button (click)="sin()" buttonShadow>sin</button>
+                <button (click)="cos()" buttonShadow>cos</button>
+                <button (click)="tan()" buttonShadow>tan</button>
+                <button (click)="log()" buttonShadow>log</button>
+                <button (click)="pi()" buttonShadow>&pi;</button>
+                <button (click)="square()" buttonShadow>X<sup>2</sup></button>
+                <button (click)="fact()" buttonShadow>X!</button>
+                <button (click)="WriteToInput('1')" buttonShadow>1</button>
+                <button (click)="WriteToInput('2')" buttonShadow>2</button>
+                <button (click)="WriteToInput('3')" buttonShadow>3</button>
+                <button (click)="WriteToInput('4')" buttonShadow>4</button>
+                <button (click)="WriteToInput('5')" buttonShadow>5</button>
+                <button (click)="WriteToInput('6')" buttonShadow>6</button>
+                <button (click)="WriteToInput('7')" buttonShadow>7</button>
+                <button (click)="WriteToInput('8')" buttonShadow>8</button>
+                <button (click)="WriteToInput('9')" buttonShadow>9</button>
+                <button (click)="WriteToInput('0')" buttonShadow>0</button>
+                <div 
+                class="extra-btns"
+                [ngClass]="{'lt-extra-btns': !isThemeChanged, 'dt-extra-btns': isThemeChanged }"
+                >
+                    <button (click)="WriteToInput('.')" buttonShadow>.</button>
+                    <button (click)="Back()" buttonShadow>X</button>
+                </div>
+            </div>
+            <div 
+            class="all-btn-signs"
+            [ngClass]="{'lt-all-btn-signs': !isThemeChanged, 'dt-all-btn-signs': isThemeChanged }"
+            >
+                <button (click)="WriteToInput('+')" buttonShadow>+</button>
+                <button (click)="WriteToInput('-')" buttonShadow>-</button>
+                <button (click)="WriteToInput('*')" buttonShadow>*</button>
+                <button (click)="WriteToInput('/')" buttonShadow>/</button>
+            </div>
+        </div>
+        <div class="btn-clear-equals">
+            <button 
+            (click)="Clear()"
+            [ngClass]="{'lt-clear': !isThemeChanged, 'dt-clear': isThemeChanged }" 
+            buttonShadow
+            >C</button>
+            <button 
+            (click)="Evaluate()"
+            [ngClass]="{'lt-equals': !isThemeChanged, 'dt-equals': isThemeChanged }" 
+            buttonShadow
+            >=</button>
+        </div>
+    </div>
+</body>

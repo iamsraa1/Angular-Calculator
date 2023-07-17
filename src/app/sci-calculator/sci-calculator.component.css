@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.lt-body{
+    background-color: #ffebd8;
+}
+.dt-body{
+    background-color: #adadad;
+}
+.theme-toggle button{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 135px;
+    font-size: small;
+    font-weight: 700;
+    background-color: white;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+}
+.my-cal{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    border-radius: 1rem;
+    padding: 10px;
+    margin-bottom: 150px;
+}
+
+.light-theme-my-cal{
+    background-color: orange;
+}
+.dark-theme-my-cal{
+    background-color: #000;
+}
+
+input{
+    width: 80%;
+    margin: 10px 0;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 15px;
+    border: 1px solid #fff;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid rgb(75, 75, 75);
+}    
+
+.all-btns{
+    display: flex;
+}
+
+.all-btn-numbers{
+    display: flex;
+    width: 40rem;
+    flex-wrap: wrap;
+}
+
+.all-btn-signs{
+    display: flex;
+    flex-direction: column;
+}
+
+.all-btn-numbers button, .all-btn-signs button{
+    border: none;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-in;
+}
+.lt-all-btn-numbers button{
+    background-color: #ffebcd;
+    color: #000;
+}
+.dt-all-btn-numbers button{
+    background-color: #28282b;
+    color: #ffebcd;
+}
+
+.all-btn-signs button{
+    font-weight: 700;
+}
+.lt-all-btn-signs button{
+    background-color: #ff0000;
+    color: #000;
+}
+.dt-all-btn-signs button{
+    background-color: #4c0000;
+    color: #ffebcd;
+}
+
+.extra-btns{
+    display: flex;
+}
+.lt-extra-btns button{
+    background-color: #ffebcd;
+    color: #ffa500;
+}
+.dt-extra-btns button{
+    background-color: #28282b;
+    color: #ffa500;
+}
+
+.btn-clear-equals{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.btn-clear-equals button{
+    width: 120px;
+    font-size: 30px;
+    padding: 5px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    transition: all .05s ease-in;
+}
+
+.lt-clear{
+    color: #ffa500;
+    background-color: #ffebcd;
+}
+.dt-clear{
+    color: #ffa500;
+    background-color: #28282b;
+}
+
+.lt-equals{
+    color: #00ff00;
+    background-color: #ffebcd;
+}
+.dt-equals{
+    color: #00ff00;
+    background-color: #28282b;
+}
+

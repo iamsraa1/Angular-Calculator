@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <!-- router link is a special directive by angular to implement routes   -->
+            <li 
+            role="presentation" 
+            routerLinkActive="active"
+            [routerLinkActiveOptions] ="{exact: true}"
+            ><a routerLink="/">Base</a></li>
+            <li role="presentation" routerLinkActive="active"><a routerLink="/Sci-Cal">Scientific</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <router-outlet></router-outlet>
+    </div>
+</div>
